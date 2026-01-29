@@ -1,0 +1,20 @@
+Project Setup Information
+
+1.  **Project Initialization**: Created a NestJS project named "asinos_api".
+2.  **Configuration**:
+    -   Installed `@nestjs/config` for environment variable management.
+    -   Configured `ConfigModule` globally in `AppModule`.
+    -   Set up global API prefix in `main.ts` using `API_PREFIX` and `API_VERSION` from `.env`.
+        -   Resulting Prefix: `api/v1` (based on default `.env` values).
+3.  **Hot Module Replacement (HMR)**:
+    -   Enabled Webpack HMR for faster development updates.
+    -   Use `npm run start:hmr` to start the server in HMR mode.
+    -   The server will apply updates without a full restart when files are saved.
+4.  **Environment Variables**:
+    -   The application expects `API_PREFIX` and `API_VERSION` in the `.env` file.
+    -   Current `.env` values: `API_PREFIX=api`, `API_VERSION=v1`.
+
+Usage:
+-   Start the app (Standard): `npm run start`
+-   Start the app (HMR): `npm run start:hmr`
+-   Access the API: `http://localhost:3000/api/v1`
